@@ -1,0 +1,4 @@
+H:/C++/raylib-tetris-oop/cmake-build-debug/CMakeFiles/preprocess.dir
+H:/C++/raylib-tetris-oop/cmake-build-debug/CMakeFiles/raylib-tetris-oop.dir
+H:/C++/raylib-tetris-oop/cmake-build-debug/CMakeFiles/edit_cache.dir
+H:/C++/raylib-tetris-oop/cmake-build-debug/CMakeFiles/rebuild_cache.dir

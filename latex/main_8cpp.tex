@@ -1,0 +1,65 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Main file for the raylib Tetris game.  
+
+
+{\ttfamily \#include $<$raylib.\+h$>$}\newline
+{\ttfamily \#include "{}game.\+h"{}}\newline
+{\ttfamily \#include "{}colors.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8cpp_abf30848723419125d7009e38f1a42686}{Event\+Triggered}} (double interval)
+\begin{DoxyCompactList}\small\item\em Checks if a certain time interval has passed since the last update. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function for the raylib Tetris game. ~\newline
+Initializes the window, loads the font, and starts the game loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_a344adddb4b721b52e3bb43c1d6506c86}\label{main_8cpp_a344adddb4b721b52e3bb43c1d6506c86} 
+double {\bfseries last\+Update\+Time} = 0
+\begin{DoxyCompactList}\small\item\em Time of the last update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main file for the raylib Tetris game. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_abf30848723419125d7009e38f1a42686}\label{main_8cpp_abf30848723419125d7009e38f1a42686} 
+\index{main.cpp@{main.cpp}!EventTriggered@{EventTriggered}}
+\index{EventTriggered@{EventTriggered}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{EventTriggered()}{EventTriggered()}}
+{\footnotesize\ttfamily bool Event\+Triggered (\begin{DoxyParamCaption}\item[{double}]{interval }\end{DoxyParamCaption})}
+
+
+
+Checks if a certain time interval has passed since the last update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interval} & The time interval to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the interval has passed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function for the raylib Tetris game. ~\newline
+Initializes the window, loads the font, and starts the game loop. 
+
+\begin{DoxyReturn}{Returns}
+0 on successful execution. 
+\end{DoxyReturn}

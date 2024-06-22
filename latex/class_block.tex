@@ -1,0 +1,89 @@
+\doxysection{Block Class Reference}
+\hypertarget{class_block}{}\label{class_block}\index{Block@{Block}}
+
+
+Inherited by IBlock, JBlock, LBlock, OBlock, SBlock, TBlock, and ZBlock.
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_block_a37658a946bf5067ad01d68d9ff086adc}\label{class_block_a37658a946bf5067ad01d68d9ff086adc} 
+{\bfseries Block} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_block}{Block} class. Initializes the cell size, rotation state, colors, and offsets. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_block_aff9a876805127586734c4f39910cf9a2}{Draw}} (int offsetX, int offsetY)
+\begin{DoxyCompactList}\small\item\em Draws the block at the specified offset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_block_a8d3c1b1b61b9a5671281508e42034010}{Move}} (int rows, int columns)
+\begin{DoxyCompactList}\small\item\em Moves the block by the specified number of rows and columns. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_position}{Position}} $>$ \mbox{\hyperlink{class_block_a807d1cf9876d903882bc1462af0f9c81}{Get\+Cell\+Positions}} ()
+\begin{DoxyCompactList}\small\item\em Returns the positions of the cells in the block, taking into account the current rotation state and offsets. \end{DoxyCompactList}\item 
+\Hypertarget{class_block_a1ced2170a2dad5b9110cb3c2171be6e4}\label{class_block_a1ced2170a2dad5b9110cb3c2171be6e4} 
+void {\bfseries Rotate} ()
+\begin{DoxyCompactList}\small\item\em Rotates the block to the next rotation state. \end{DoxyCompactList}\item 
+\Hypertarget{class_block_a1dc89cd9d5eb04508c2e38c87da6e937}\label{class_block_a1dc89cd9d5eb04508c2e38c87da6e937} 
+void {\bfseries Undo\+Rotation} ()
+\begin{DoxyCompactList}\small\item\em Rotates the block to the previous rotation state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_block_a86f38c868a8dab090101db6492078071}\label{class_block_a86f38c868a8dab090101db6492078071} 
+int {\bfseries id}
+\item 
+\Hypertarget{class_block_a56a842cb00e27e55f6adc4ce4a1cb649}\label{class_block_a56a842cb00e27e55f6adc4ce4a1cb649} 
+std\+::map$<$ int, std\+::vector$<$ \mbox{\hyperlink{class_position}{Position}} $>$ $>$ {\bfseries cells}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_block_aff9a876805127586734c4f39910cf9a2}\label{class_block_aff9a876805127586734c4f39910cf9a2} 
+\index{Block@{Block}!Draw@{Draw}}
+\index{Draw@{Draw}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Block\+::\+Draw (\begin{DoxyParamCaption}\item[{int}]{offsetX,  }\item[{int}]{offsetY }\end{DoxyParamCaption})}
+
+
+
+Draws the block at the specified offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offsetX} & The x-\/coordinate offset. \\
+\hline
+{\em offsetY} & The y-\/coordinate offset. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_block_a807d1cf9876d903882bc1462af0f9c81}\label{class_block_a807d1cf9876d903882bc1462af0f9c81} 
+\index{Block@{Block}!GetCellPositions@{GetCellPositions}}
+\index{GetCellPositions@{GetCellPositions}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{GetCellPositions()}{GetCellPositions()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_position}{Position}} $>$ Block\+::\+Get\+Cell\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the positions of the cells in the block, taking into account the current rotation state and offsets. 
+
+\begin{DoxyReturn}{Returns}
+The list of moved tiles. 
+\end{DoxyReturn}
+\Hypertarget{class_block_a8d3c1b1b61b9a5671281508e42034010}\label{class_block_a8d3c1b1b61b9a5671281508e42034010} 
+\index{Block@{Block}!Move@{Move}}
+\index{Move@{Move}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Block\+::\+Move (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns }\end{DoxyParamCaption})}
+
+
+
+Moves the block by the specified number of rows and columns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows to move the block by. \\
+\hline
+{\em columns} & The number of columns to move the block by. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+block.\+h\item 
+block.\+cpp\end{DoxyCompactItemize}

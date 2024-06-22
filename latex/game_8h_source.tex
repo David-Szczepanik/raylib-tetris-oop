@@ -1,0 +1,39 @@
+\doxysection{game.\+h}
+\hypertarget{game_8h_source}{}\label{game_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}grid.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}tetrominoes.cpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game}{Game}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}();}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}();}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_aad2c20e2c5529244095c50c238911e30}{Draw}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a6cb82eaece4e30724f3fe4e0d4bde5fc}{HandleInput}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_ab927b082b475ef3fe642bca3f6abc5d8}{MoveBlockDown}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ gameOver;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ score;}
+\DoxyCodeLine{00015\ \ \ \ \ Music\ music;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ MoveBlockLeft();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ MoveBlockRight();}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_block}{Block}}\ GetRandomBlock();}
+\DoxyCodeLine{00021\ \ \ \ \ std::vector<Block>\ GetAllBlocks();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsBlockOutside();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ RotateBlock();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ LockBlock();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ BlockFits();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ Reset();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateScore(\textcolor{keywordtype}{int}\ linesCleared,\ \textcolor{keywordtype}{int}\ moveDownPoints);}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_grid}{Grid}}\ grid;}
+\DoxyCodeLine{00029\ \ \ \ \ std::vector<Block>\ blocks;}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_block}{Block}}\ currentBlock;}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_block}{Block}}\ nextBlock;}
+\DoxyCodeLine{00032\ \ \ \ \ Sound\ rotateSound;}
+\DoxyCodeLine{00033\ \ \ \ \ Sound\ clearSound;}
+\DoxyCodeLine{00034\ \};}
+
+\end{DoxyCode}

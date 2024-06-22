@@ -1,0 +1,25 @@
+\chapter{Get WEB library}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Get WEB library@{Get WEB library}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{PLATFORM\ \ \ \ \ \ \ \ \ \ \ \ \ ?=\ PLATFORM\_WEB}
+\DoxyCodeLine{RAYLIB\_RELEASE\_PATH\ \ ?=\ \$(RAYLIB\_SRC\_PATH)/web}
+\DoxyCodeLine{emsdk\ activate\ latest\ -\/-\/permanent\ to\ get\ versions\ of\ tools}
+\DoxyCodeLine{}
+\DoxyCodeLine{PYTHON\_PATH\ \ \ \ \ \ \ \ :=\ \$(EMSDK\_PATH)/python/3.9.2-\/nuget-\/64bit}
+\DoxyCodeLine{NODE\_PATH\ \ \ \ \ \ \ \ \ \ :=\ \$(EMSDK\_PATH)/node/16.20.0-\/64bit/bin}
+\DoxyCodeLine{}
+\DoxyCodeLine{make\ -\/e\ PLATFORM=PLATFORM\_WEB\ -\/B}
+\DoxyCodeLine{}
+\DoxyCodeLine{creates\ libraylib.a\ in\ web\ folder}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Compile to WASM}{Compile to WASM}}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{emcc\ -\/o\ tetris.html\ main.cpp\ colors.cpp\ grid.cpp\ position.cpp\ -\/Wall\ -\/std=c++17\ -\/D\_DEFAULT\_SOURCE\ -\/Wno-\/missing-\/braces\ -\/Wunused-\/result\ -\/Os\ -\/I.\ -\/I\ C:/Users/david/.vcpkg-\/clion/vcpkg/buildtrees/raylib/src/5.0-\/24e38c87d8.clean/src\ -\/I\ C:/Users/david/.vcpkg-\/clion/vcpkg/buildtrees/raylib/src/5.0-\/24e38c87d8.clean/src/external\ -\/L.\ -\/L\ C:/Users/david/.vcpkg-\/clion/vcpkg/buildtrees/raylib/src/5.0-\/24e38c87d8.clean/src\ -\/s\ USE\_GLFW=3\ -\/s\ ASYNCIFY\ -\/s\ TOTAL\_MEMORY=67108864\ -\/s\ FORCE\_FILESYSTEM=1\ -\/-\/shell-\/file\ C:/Users/david/.vcpkg-\/clion/vcpkg/buildtrees/raylib/src/5.0-\/24e38c87d8.clean/src/shell.html\ C:/Users/david/.vcpkg-\/clion/vcpkg/buildtrees/raylib/src/5.0-\/24e38c87d8.clean/src/web/libraylib.a\ -\/DPLATFORM\_WEB\ -\/s\ "{}EXPORTED\_FUNCTIONS=['\_free','\_malloc','\_main']"{}\ -\/s\ EXPORTED\_RUNTIME\_METHODS=ccall}
+
+\end{DoxyCode}
+ 

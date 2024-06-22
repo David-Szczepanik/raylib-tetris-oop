@@ -1,0 +1,89 @@
+\doxysection{Game Class Reference}
+\hypertarget{class_game}{}\label{class_game}\index{Game@{Game}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_game}{Game} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\texorpdfstring{$\sim$}{\string~}\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_game}{Game} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_aad2c20e2c5529244095c50c238911e30}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em Draws the game elements on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a6cb82eaece4e30724f3fe4e0d4bde5fc}{Handle\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Handles user input for controlling the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_ab927b082b475ef3fe642bca3f6abc5d8}{Move\+Block\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Moves the current block down. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_a21f9857b2d4b38b97ec90b9c2ce3413d}\label{class_game_a21f9857b2d4b38b97ec90b9c2ce3413d} 
+bool {\bfseries game\+Over}
+\item 
+\Hypertarget{class_game_afaf9404196df9968103d5b0d0ad08139}\label{class_game_afaf9404196df9968103d5b0d0ad08139} 
+int {\bfseries score}
+\item 
+\Hypertarget{class_game_aaea1edb9042f804aea528ab5fe2d9b32}\label{class_game_aaea1edb9042f804aea528ab5fe2d9b32} 
+Music {\bfseries music}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{class_game}{Game} object. 
+
+Initializes the game grid, loads blocks, sets the initial current and next blocks, and initializes the audio device with the necessary sounds and music. \Hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}\label{class_game_ae3d112ca6e0e55150d2fdbc704474530} 
+\index{Game@{Game}!````~Game@{\texorpdfstring{$\sim$}{\string~}Game}}
+\index{````~Game@{\texorpdfstring{$\sim$}{\string~}Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Game()}{\string~Game()}}
+{\footnotesize\ttfamily Game\+::\texorpdfstring{$\sim$}{\string~}\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{class_game}{Game} object. 
+
+Unloads sounds and music, and closes the audio device. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_aad2c20e2c5529244095c50c238911e30}\label{class_game_aad2c20e2c5529244095c50c238911e30} 
+\index{Game@{Game}!Draw@{Draw}}
+\index{Draw@{Draw}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Game\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the game elements on the screen. 
+
+Draws the grid, current block, and next block at specified positions. \Hypertarget{class_game_a6cb82eaece4e30724f3fe4e0d4bde5fc}\label{class_game_a6cb82eaece4e30724f3fe4e0d4bde5fc} 
+\index{Game@{Game}!HandleInput@{HandleInput}}
+\index{HandleInput@{HandleInput}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{HandleInput()}{HandleInput()}}
+{\footnotesize\ttfamily void Game\+::\+Handle\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles user input for controlling the game. 
+
+Handles movement and rotation of the current block based on key presses. \Hypertarget{class_game_ab927b082b475ef3fe642bca3f6abc5d8}\label{class_game_ab927b082b475ef3fe642bca3f6abc5d8} 
+\index{Game@{Game}!MoveBlockDown@{MoveBlockDown}}
+\index{MoveBlockDown@{MoveBlockDown}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{MoveBlockDown()}{MoveBlockDown()}}
+{\footnotesize\ttfamily void Game\+::\+Move\+Block\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Moves the current block down. 
+
+Checks if the block can move down without going outside the grid or colliding with other blocks. If the block can\textquotesingle{}t move further down, it locks the block in place. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game.\+h\item 
+\mbox{\hyperlink{game_8cpp}{game.\+cpp}}\end{DoxyCompactItemize}

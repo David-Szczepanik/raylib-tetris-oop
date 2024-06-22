@@ -1,0 +1,36 @@
+\doxysection{LBlock Class Reference}
+\hypertarget{class_l_block}{}\label{class_l_block}\index{LBlock@{LBlock}}
+Inheritance diagram for LBlock\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_l_block}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_block}{Block}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Block} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_block}{Block} class. Initializes the cell size, rotation state, colors, and offsets. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_block_aff9a876805127586734c4f39910cf9a2}{Draw}} (int offsetX, int offsetY)
+\begin{DoxyCompactList}\small\item\em Draws the block at the specified offset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_block_a8d3c1b1b61b9a5671281508e42034010}{Move}} (int rows, int columns)
+\begin{DoxyCompactList}\small\item\em Moves the block by the specified number of rows and columns. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_position}{Position}} $>$ \mbox{\hyperlink{class_block_a807d1cf9876d903882bc1462af0f9c81}{Get\+Cell\+Positions}} ()
+\begin{DoxyCompactList}\small\item\em Returns the positions of the cells in the block, taking into account the current rotation state and offsets. \end{DoxyCompactList}\item 
+void {\bfseries Rotate} ()
+\begin{DoxyCompactList}\small\item\em Rotates the block to the next rotation state. \end{DoxyCompactList}\item 
+void {\bfseries Undo\+Rotation} ()
+\begin{DoxyCompactList}\small\item\em Rotates the block to the previous rotation state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_block}{Block}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries id}
+\item 
+std\+::map$<$ int, std\+::vector$<$ \mbox{\hyperlink{class_position}{Position}} $>$ $>$ {\bfseries cells}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tetrominoes.\+cpp\end{DoxyCompactItemize}

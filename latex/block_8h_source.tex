@@ -1,0 +1,30 @@
+\doxysection{block.\+h}
+\hypertarget{block_8h_source}{}\label{block_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}position.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}colors.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_block}{Block}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_block_a37658a946bf5067ad01d68d9ff086adc}{Block}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_block_aff9a876805127586734c4f39910cf9a2}{Draw}}(\textcolor{keywordtype}{int}\ offsetX,\ \textcolor{keywordtype}{int}\ offsetY);}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_block_a8d3c1b1b61b9a5671281508e42034010}{Move}}(\textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ columns);}
+\DoxyCodeLine{00013\ \ \ \ \ std::vector<Position>\ \mbox{\hyperlink{class_block_a807d1cf9876d903882bc1462af0f9c81}{GetCellPositions}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_block_a1ced2170a2dad5b9110cb3c2171be6e4}{Rotate}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_block_a1dc89cd9d5eb04508c2e38c87da6e937}{UndoRotation}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00017\ \ \ \ \ std::map<int,\ std::vector<Position>>\ cells;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ cellSize;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ rotationState;}
+\DoxyCodeLine{00024\ \ \ \ \ std::vector<Color>\ colors;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ rowOffset;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ columnOffset;}
+\DoxyCodeLine{00027\ \};}
+
+\end{DoxyCode}

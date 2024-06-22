@@ -1,0 +1,102 @@
+\doxysection{tetrominoes.\+cpp}
+\hypertarget{tetrominoes_8cpp_source}{}\label{tetrominoes_8cpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}block.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}position.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }LBlock\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_block}{Block}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ LBlock()}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ 1;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ cells[0]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2)\};}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ cells[1]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 2)\};}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ cells[2]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 0)\};}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ cells[3]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1)\};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_block_a8d3c1b1b61b9a5671281508e42034010}{Move}}(0,\ 3);}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }JBlock\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_block}{Block}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ JBlock()}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ 2;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ cells[0]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2)\};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ cells[1]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(0,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1)\};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ cells[2]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 2)\};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ cells[3]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1)\};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_block_a8d3c1b1b61b9a5671281508e42034010}{Move}}(0,\ 3);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }IBlock\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_block}{Block}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ IBlock()}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ 3;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ cells[0]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 3)\};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ cells[1]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(3,\ 2)\};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ cells[2]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(2,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 3)\};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ cells[3]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(3,\ 1)\};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_block_a8d3c1b1b61b9a5671281508e42034010}{Move}}(-\/1,\ 3);}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }OBlock\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_block}{Block}}}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ OBlock()}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ 4;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ cells[0]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1)\};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_block_a8d3c1b1b61b9a5671281508e42034010}{Move}}(0,\ 4);}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{class\ }SBlock\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_block}{Block}}}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00060\ \ \ \ \ SBlock()}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ 5;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ cells[0]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(0,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1)\};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ cells[1]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 2)\};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ cells[2]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1)\};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ cells[3]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1)\};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_block_a8d3c1b1b61b9a5671281508e42034010}{Move}}(0,\ 3);}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{class\ }TBlock\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_block}{Block}}}
+\DoxyCodeLine{00072\ \{}
+\DoxyCodeLine{00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00074\ \ \ \ \ TBlock()}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ 6;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ cells[0]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2)\};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ cells[1]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1)\};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ cells[2]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1)\};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ cells[3]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1)\};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_block_a8d3c1b1b61b9a5671281508e42034010}{Move}}(0,\ 3);}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{class\ }ZBlock\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_block}{Block}}}
+\DoxyCodeLine{00086\ \{}
+\DoxyCodeLine{00087\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00088\ \ \ \ \ ZBlock()}
+\DoxyCodeLine{00089\ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ 7;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ cells[0]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2)\};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ cells[1]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 2),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1)\};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ cells[2]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 2)\};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ cells[3]\ =\ \{\mbox{\hyperlink{class_position}{Position}}(0,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 0),\ \mbox{\hyperlink{class_position}{Position}}(1,\ 1),\ \mbox{\hyperlink{class_position}{Position}}(2,\ 0)\};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_block_a8d3c1b1b61b9a5671281508e42034010}{Move}}(0,\ 3);}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,30 @@
+\doxysection{grid.\+h}
+\hypertarget{grid_8h_source}{}\label{grid_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <raylib.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_grid}{Grid}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_grid}{Grid}}();}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{void}\ Initialize();}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ Print();}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ Draw();}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsCellOutside(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column);}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsCellEmpty(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ ClearFullRows();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ grid[20][10];}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsRowFull(\textcolor{keywordtype}{int}\ row);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ ClearRow(\textcolor{keywordtype}{int}\ row);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ MoveRowDown(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ numRows);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ numRows;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ numCols;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ cellSize;}
+\DoxyCodeLine{00024\ \ \ \ \ std::vector<Color>\ colors;}
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

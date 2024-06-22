@@ -1,0 +1,21 @@
+"C:\Program Files\JetBrains\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.1/bin/ninja/win/x64/ninja.exe" -DCMAKE_TOOLCHAIN_FILE=C:\Users\david\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake -G Ninja -S H:\C++\raylib-tetris-oop -B H:\C++\raylib-tetris-oop\cmake-build-debug
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-windows...
+Compiler found: G:/VS/VC/Tools/MSVC/14.39.33519/bin/Hostx64/x64/cl.exe
+All requested packages are currently installed.
+Total install time: 2.4 us
+raylib provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(raylib CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE raylib)
+
+raylib provides pkg-config modules:
+
+  # A simple and easy-to-use library to enjoy videogames programming
+  raylib
+
+-- Running vcpkg install - done
+-- Configuring done (8.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: H:/C++/raylib-tetris-oop/cmake-build-debug
