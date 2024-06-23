@@ -2,7 +2,6 @@
  * @file game.cpp
  * @brief Implementation of the Game class.
  */
-
 #include "game.h"
 #include <random>
 
@@ -19,11 +18,14 @@ Game::Game() {
   nextBlock = GetRandomBlock();
   gameOver = false;
   score = 0;
+  isSoundMuted = false;
+  muteButton = {340, 410, 130, 40};
   InitAudioDevice();
+  // Source: https://www.youtube.com/watch?v=5_L-4JrUGZk
   music = LoadMusicStream("../Sounds/music.mp3");
   PlayMusicStream(music);
-  rotateSound = LoadSound("../Sounds/rotate.mp3");
-  clearSound = LoadSound("../Sounds/clear.mp3");
+  // rotateSound = LoadSound("../Sounds/rotate.mp3");
+  clearSound = LoadSound("../Sounds/clear.wav");
 }
 
 /**
@@ -32,7 +34,7 @@ Game::Game() {
  * Unloads sounds and music, and closes the audio device.
  */
 Game::~Game() {
-  UnloadSound(rotateSound);
+  // UnloadSound(rotateSound);
   UnloadSound(clearSound);
   UnloadMusicStream(music);
   CloseAudioDevice();
@@ -89,27 +91,60 @@ void Game::Draw() {
  * Handles movement and rotation of the current block based on key presses.
  */
 void Game::HandleInput() {
-  int keyPressed = GetKeyPressed();
-  if (gameOver && keyPressed != 0) {
+  if (CheckCollisionPointRec(GetMousePosition(), muteButton) && IsMouseButtonReleased(MOUSE_LEFT_BUTTON)) {
+    isSoundMuted = !isSoundMuted;
+    if (isSoundMuted) {
+      PauseMusicStream(music);
+    }
+    else {
+      ResumeMusicStream(music);
+    }
+  }
+
+  if (IsKeyPressed(KEY_G)) {
+    isSoundMuted = !isSoundMuted;
+    if (isSoundMuted) {
+      PauseMusicStream(music);
+    }
+    else {
+      ResumeMusicStream(music);
+    }
+  }
+
+  if (IsKeyPressed(KEY_P)) {
+    TogglePause();
+  }
+  if (isPaused) {
+    return;
+  }
+
+  if (gameOver && IsKeyDown(KEY_ENTER)) {
     gameOver = false;
     Reset();
   }
 
-  switch (keyPressed) {
-  case KEY_LEFT:
-    MoveBlockLeft();
-    break;
-  case KEY_RIGHT:
-    MoveBlockRight();
-    break;
-  case KEY_DOWN:
-    MoveBlockDown();
-    UpdateScore(0, 1);
-    break;
-  case KEY_UP:
-    RotateBlock();
-    break;
+  if (KeySpam(0.09)) {
+    if (IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_A)) {
+      MoveBlockLeft();
+    }
+    if (IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_D)) {
+      MoveBlockRight();
+    }
+    if (IsKeyDown(KEY_DOWN) || IsKeyDown(KEY_S)) {
+      MoveBlockDown();
+      UpdateScore(0, 1);
+    }
   }
+  if (IsKeyPressed(KEY_UP) || IsKeyPressed(KEY_W)) {
+    RotateBlock();
+  }
+}
+
+/**
+ * @brief Pauses the game.
+ */
+void Game::TogglePause() {
+  isPaused = !isPaused;
 }
 
 /**
@@ -156,6 +191,29 @@ void Game::MoveBlockDown() {
   }
 }
 
+double lastUpdateTime = 0;
+
+bool Game::EventTriggered(double interval) {
+  double currentTime = GetTime();
+  if (currentTime - lastUpdateTime >= interval) {
+    lastUpdateTime = currentTime;
+    return true;
+  }
+  return false;
+}
+
+
+double lastKeyPressed = 0;
+
+bool Game::KeySpam(double interval) {
+  double currentTime = GetTime();
+  if (currentTime - lastKeyPressed >= interval) {
+    lastKeyPressed = currentTime;
+    return true;
+  }
+  return false;
+}
+
 /**
  * @brief Checks if the current block is outside the grid.
  *
@@ -184,9 +242,9 @@ void Game::RotateBlock() {
     if (IsBlockOutside() || !BlockFits()) {
       currentBlock.UndoRotation();
     }
-    else {
-      PlaySound(rotateSound);
-    }
+    // else {
+    // PlaySound(rotateSound);
+    // }
   }
 }
 

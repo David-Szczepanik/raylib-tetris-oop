@@ -2,33 +2,38 @@
 #include "grid.h"
 #include "tetrominoes.cpp"
 
-class Game
-{
+class Game {
 public:
-    Game();
-    ~Game();
-    void Draw();
-    void HandleInput();
-    void MoveBlockDown();
-    bool gameOver;
-    int score;
-    Music music;
+  Game();
+  ~Game();
+  void Draw();
+  void HandleInput();
+  void MoveBlockDown();
+  bool gameOver;
+  bool isPaused = false;
+  bool isSoundMuted;
+  Rectangle muteButton;
+  bool EventTriggered(double interval);
+  bool KeySpam(double interval);
+  int score;
+  Music music;
 
 private:
-    void MoveBlockLeft();
-    void MoveBlockRight();
-    Block GetRandomBlock();
-    std::vector<Block> GetAllBlocks();
-    bool IsBlockOutside();
-    void RotateBlock();
-    void LockBlock();
-    bool BlockFits();
-    void Reset();
-    void UpdateScore(int linesCleared, int moveDownPoints);
-    Grid grid;
-    std::vector<Block> blocks;
-    Block currentBlock;
-    Block nextBlock;
-    Sound rotateSound;
-    Sound clearSound;
+  void TogglePause();
+  void MoveBlockLeft();
+  void MoveBlockRight();
+  Block GetRandomBlock();
+  std::vector<Block> GetAllBlocks();
+  bool IsBlockOutside();
+  void RotateBlock();
+  void LockBlock();
+  bool BlockFits();
+  void Reset();
+  void UpdateScore(int linesCleared, int moveDownPoints);
+  Grid grid;
+  std::vector<Block> blocks;
+  Block currentBlock;
+  Block nextBlock;
+  // Sound rotateSound;
+  Sound clearSound;
 };

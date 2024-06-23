@@ -10,21 +10,21 @@
 /**
  * @brief Time of the last update.
  */
-double lastUpdateTime = 0;
+// double lastUpdateTime = 0;
 
 /**
  * @brief Checks if a certain time interval has passed since the last update.
  * @param interval The time interval to check.
  * @return True if the interval has passed, false otherwise.
  */
-bool EventTriggered(double interval) {
-  double currentTime = GetTime();
-  if (currentTime - lastUpdateTime >= interval) {
-    lastUpdateTime = currentTime;
-    return true;
-  }
-  return false;
-}
+// bool EventTriggered(double interval) {
+//   double currentTime = GetTime();
+//   if (currentTime - lastUpdateTime >= interval) {
+//     lastUpdateTime = currentTime;
+//     return true;
+//   }
+//   return false;
+// }
 
 /**
  * @brief Main function for the raylib Tetris game.
@@ -43,27 +43,45 @@ int main() {
   while (WindowShouldClose() == false) {
     UpdateMusicStream(game.music);
     game.HandleInput();
-   // 1000 ms between each update
-    if (EventTriggered(1.0)) {
-      game.MoveBlockDown();
+    // 1000 ms between each update
+    if (!game.isPaused) {
+      if (game.EventTriggered(1.0)) {
+        game.MoveBlockDown();
+      }
     }
 
+
     BeginDrawing();
-    ClearBackground(darkBlue);
+    ClearBackground(lightBlue);
     DrawTextEx(font, "Score", {365, 15}, 38, 2, WHITE);
     DrawTextEx(font, "Next", {370, 175}, 38, 2, WHITE);
     if (game.gameOver) {
       DrawTextEx(font, "GAME OVER", {320, 450}, 38, 2, WHITE);
     }
-    DrawRectangleRounded({320, 55, 170, 60}, 0.3, 6, lightBlue);
+
+    DrawRectangleRounded({320, 55, 170, 60}, 0.3, 6, GOLD);
+
 
     char scoreText[10];
     sprintf(scoreText, "%d", game.score);
     Vector2 textSize = MeasureTextEx(font, scoreText, 38, 2);
 
     DrawTextEx(font, scoreText, {320 + (170 - textSize.x) / 2, 65}, 38, 2, WHITE);
-    DrawRectangleRounded({320, 215, 170, 180}, 0.3, 6, lightBlue);
+    DrawRectangleRounded({320, 215, 170, 180}, 0.3, 6, darkGrey);
     game.Draw();
+    if (game.isPaused) {
+      DrawTextEx(font, "PAUSED", {84, 180}, 50, 2, WHITE);
+      DrawTextEx(font, "Press P to UNPAUSE", {61, 225}, 20, 2, WHITE);
+    }
+
+    DrawRectangleRounded(game.muteButton, 0.3, 6, purple);
+    if (game.isSoundMuted) {
+      DrawText("Unmute", 370, 420, 20, WHITE);
+    }
+    else {
+      DrawText("Mute", 380, 420, 20, WHITE);
+    }
+
     EndDrawing();
   }
 
