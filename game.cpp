@@ -191,8 +191,13 @@ void Game::MoveBlockDown() {
   }
 }
 
-double lastUpdateTime = 0;
 
+double lastUpdateTime = 0;
+/**
+ * @brief Checks if a certain time interval has passed since the last update.
+ * @param interval The time interval to check.
+ * @return True if the interval has passed, false otherwise.
+ */
 bool Game::EventTriggered(double interval) {
   double currentTime = GetTime();
   if (currentTime - lastUpdateTime >= interval) {

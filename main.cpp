@@ -12,19 +12,8 @@
  */
 // double lastUpdateTime = 0;
 
-/**
- * @brief Checks if a certain time interval has passed since the last update.
- * @param interval The time interval to check.
- * @return True if the interval has passed, false otherwise.
- */
-// bool EventTriggered(double interval) {
-//   double currentTime = GetTime();
-//   if (currentTime - lastUpdateTime >= interval) {
-//     lastUpdateTime = currentTime;
-//     return true;
-//   }
-//   return false;
-// }
+
+
 
 /**
  * @brief Main function for the raylib Tetris game.
@@ -49,7 +38,6 @@ int main() {
         game.MoveBlockDown();
       }
     }
-
 
     BeginDrawing();
     ClearBackground(lightBlue);
